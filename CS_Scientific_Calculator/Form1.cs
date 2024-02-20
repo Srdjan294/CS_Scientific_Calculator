@@ -77,6 +77,47 @@ namespace CS_Scientific_Calculator
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "0";
+        }
+
+        private void btnClearEntry_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "0";
+
+            String f, s;
+            f = Convert.ToString(enterFirstValue);
+            s = Convert.ToString(enterSecondValue);
+
+            f = "";
+            s = "";
+        }
+
+        private void btnPM_Click(object sender, EventArgs e)
+        {
+            double q = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = Convert.ToString(-1 * q);
+        }
+
+        private void btnBS_Click(object sender, EventArgs e)
+        {
+            if ( txtResult.Text.Length > 0)
+            {
+                txtResult.Text = txtResult.Text.Remove(txtResult.Text.Length - 1, 1);
+            }
+
+            if (txtResult.Text == "")
+            {
+                txtResult.Text = "0";
+            }
+        }
+
+        private void txtResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
