@@ -118,9 +118,37 @@ namespace CS_Scientific_Calculator
 
         }
 
+        private void standardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Width = 360; // 816
+            txtResult.Width = 318;
+        }
+
+        private void scientificToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Width = 715; // 816
+            txtResult.Width = 665;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult exitCal;
+
+            exitCal = MessageBox.Show("Confirm if you want to exit", "Scientific Calculator",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+            if (exitCal == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Width = 360; // 816
+            txtResult.Width = 318;
         }
     }
 }
